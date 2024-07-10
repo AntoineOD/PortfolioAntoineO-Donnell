@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/5a4d3f2602.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</head>
+<body>
+    <div class="sepIndex" x-data="{ hoveredLink: null }">
+        <div class="container">
+            <aside class="aCote">
+                <section :class="{ 'zoomed': hoveredLink === 'Antoine' }" @mouseenter="hoveredLink = 'Antoine'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house-user icon" style="color: #757474;"></i>
+                        <span>Home</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Projects' }" @mouseenter="hoveredLink = 'Projects'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="projets.html">
+                        <i class="fa-solid fa-folder-open icon" style="color:  #FEFEFE;"></i>
+                        <span>Projets</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'CV' }" @mouseenter="hoveredLink = 'CV'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="cv.html">
+                        <i class="fa-solid fa-file-lines icon" style="color: #FEFEFE;"></i>
+                        <span>CV</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Contact' }" @mouseenter="hoveredLink = 'Contact'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book icon" style="color: #FEFEFE;"></i>
+                        <span>Contact</span>
+                    </a>
+                </section>
+            </aside>
+            <div class="main-wrapper">
+                <div id="particles-js"></div>
+                <main class="nom">
+                    <div class="surMoi">
+                        <h1>Antoine O'Donnell</h1>
+                        <span>&lt;/Developpeur&gt;</span>             
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

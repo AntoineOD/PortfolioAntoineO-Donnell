@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/5a4d3f2602.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="sepIndex" x-data="{ hoveredLink: null }">
+        <div class="container">
+            <aside class="aCote">
+                <section :class="{ 'zoomed': hoveredLink === 'Antoine' }" @mouseenter="hoveredLink = 'Antoine'"
+                    @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house-user icon" style="color: #FEFEFE;"></i>
+                        <span>Home</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Projects' }" @mouseenter="hoveredLink = 'Projects'"
+                    @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="projets.html">
+                        <i class="fa-solid fa-folder-open icon" style="color:  #FEFEFE;"></i>
+                        <span>Projets</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'CV' }" @mouseenter="hoveredLink = 'CV'"
+                    @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="cv.html">
+                        <i class="fa-solid fa-file-lines icon" style="color: #757474;"></i>
+                        <span>CV</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Contact' }" @mouseenter="hoveredLink = 'Contact'"
+                    @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book icon" style="color: #FEFEFE;"></i>
+                        <span>Contact</span>
+                    </a>
+                </section>
+            </aside>
+            <div class="wrapCV">
+                <div id="particles-js"></div>
+                <div class="texteCV">
+                    <div class="presentation">
+                        <div class="blocText">
+                            <span id="debut">Bonjour, je m'appelle Antoine O'Donnell.</span><br>
+                            <br>
+                            Je suis actuellement étudiant en génie logiciel à l'École de technologie supérieure.<br>
+                            Je suis une personne passionnée et avide d'apprendre.<br><br>
+                            Actuellement, j'aime explorer toutes les branches du métier sans me spécialiser dans l'une d'entre elles.<br>
+                            J'ai de solides bases en Java et C#, en développement web, en bases de données SQL, ainsi que quelques connaissances en programmation assembleur.<br><br>
+                            Je suis ouvert à toutes les opportunités. N'hésitez pas à me contacter et à télécharger mon CV.
+                        </div>
+                    </div>
+                    <div id="linkcv">
+                        <div class="buttonlink">
+                            <a href="https://drive.google.com/file/d/1KHLq8t7DVfOYFHgU7Hl-JsZOcd5gWRm5/view?usp=sharing">
+                                <span>Téléchargement de mon CV</span>
+                                <i class="fa-solid fa-download icons" style="color: #FEFEFE;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

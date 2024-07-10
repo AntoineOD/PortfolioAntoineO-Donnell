@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/5a4d3f2602.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</head>
+<body>
+    <div class="sepIndex" x-data="{ hoveredLink: null }">
+        <div class="container">
+            <aside class="aCote">
+                <section :class="{ 'zoomed': hoveredLink === 'Antoine' }" @mouseenter="hoveredLink = 'Antoine'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house-user icon" style="color: #FEFEFE;"></i>
+                        <span>Home</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Projects' }" @mouseenter="hoveredLink = 'Projects'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="index.html">
+                        <i class="fa-solid fa-folder-open icon" style="color:  #757474;"></i>
+                        <span>Projets</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'CV' }" @mouseenter="hoveredLink = 'CV'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="cv.html">
+                        <i class="fa-solid fa-file-lines icon" style="color: #FEFEFE;"></i>
+                        <span>CV</span>
+                    </a>
+                </section>
+                <section :class="{ 'zoomed': hoveredLink === 'Contact' }" @mouseenter="hoveredLink = 'Contact'" @mouseleave="hoveredLink = null" style="display: inline-block;">
+                    <a href="contact.html">
+                        <i class="fa-solid fa-address-book icon" style="color: #FEFEFE;"></i>
+                        <span>Contact</span>
+                    </a>
+                </section>
+            </aside>
+            <div class="main-wrapper">
+                <div id="particles-js"></div>
+                <main class="listProj">
+                    <div class="tophead">
+                        <div class="titreProjet">
+                            Projets
+                        </div>
+                        <div id="dropdown" x-data="{ open: false, filter: 'all' }" class="dropdown">
+                            <i @click="open = !open" @click.away="open = false" class="fa-regular fa-square-caret-down icon" style="color: #FEFEFE; cursor: pointer;"></i>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="dropdown-menu">
+                                <div class="dropdown-item" @click="filter = 'all'; open = false">All</div>
+                                <div class="dropdown-item" @click="filter = 'category1'; open = false">Category 1</div>
+                                <div class="dropdown-item" @click="filter = 'category2'; open = false">Category 2</div>
+                                <div class="dropdown-item" @click="filter = 'category3'; open = false">Category 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projets" x-data="{ openProject: null }">
+                        <a @click="openProject = 1">
+                            <img src="https://i.im.ge/2024/02/28/gvQOwh.imagetest.png" alt="Project Image">
+                        </a>
+                        <a @click="openProject = 2">
+                            <img src="https://i.imghippo.com/files/P1shW1720560279.png" alt="Project Image">
+                        </a>
+                        <template x-if="openProject === 1">
+                            <div class="popup">
+                                <button class="close-btn" @click="openProject = null">Retour</button>
+                                <div class="popup-content">
+                                    <img src="https://i.im.ge/2024/02/28/gvQOwh.imagetest.png" alt="Popup Image">
+                                    <div class="popup-text">
+                                        <h2>Chef Chatter</h2>
+                                        <p>
+                                            Chef Chatter était le projet final de ma première année d'université.
+                                            Dans ce projet en équipe de cinq, nous devions développer une application web
+                                            et mobile dans laquelle les utilisateurs pouvaient partager ou lire des recettes.
+                                            Notre application mobile, codée en Java sur Android Studio, devait fonctionner avec les 
+                                            mêmes informations que l'application web. Nous avons donc dû développer une base de données 
+                                            SQL qui devait communiquer avec notre API à l'aide de multiples routes. 
+                                            Le site n'est malheureusement plus disponible. Les liens ci-dessous mènent vers 
+                                            le GitHub des deux projets. J'ai principalement contribué à l'application web.
+                                        </p>
+                                        <a href="https://github.com/Lsthilaire0189/tch-099-01" class="btn">Lien vers le github du projet web</a>
+                                        <a id="chef2" href="https://github.com/Lsthilaire0189/ChefChatter" class="btn">Lien vers le github du projet mobile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="openProject === 2">
+                            <div class="popup">
+                                <button class="close-btn" @click="openProject = null">Retour</button>
+                                <div class="popup-content">
+                                    <img src="https://i.imghippo.com/files/ct3CR1719429017.png" alt="Popup Image">
+                                    <div class="popup-text">
+                                        <h2>Le labyrinthe des ténèbres</h2>
+                                        <p>
+                                            Ce projet a été réalisé comme projet final pour la fin de mes études collégiales.
+                                            Ce projet a été fait en équipe de trois. Nous devions créer une simulation 3D incluant plusieurs 
+                                            éléments informatiques, physiques et mathématiques. Nous avons donc décidé de développer un jeu 
+                                            vidéo intégrant de la génération procédurale, des fonctions mathématiques et des formules de physique 
+                                            pour interagir avec certains objets. J'ai principalement travaillé sur la génération procédurale du projet. 
+                                            Ce projet a été réalisé dans Unity en C#. Le lien ci-dessous mène vers un PowerPoint que nous avons utilisé 
+                                            pour présenter le projet aux professeurs.
+                                        </p>
+                                        <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ" class="btn">Lien vers le PowerPoint</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
