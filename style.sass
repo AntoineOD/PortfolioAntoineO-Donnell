@@ -79,7 +79,6 @@ aside
   .surMoi
     box-sizing: border-box
     text-align: center
-    font-size: 50px
     color: #FEFEFE
     font-family: Open Sans, sans-serif
 
@@ -94,7 +93,6 @@ aside
   .surMoi
     box-sizing: border-box
     text-align: center
-    font-size: 50px
     color: #FEFEFE
     font-family: Open Sans, sans-serif
 
@@ -107,7 +105,6 @@ aside
   margin-left: 2%
   color: #FEFEFE
   font-family: Open Sans, sans-serif
-  font-size: 200px
 
 #dropdown
   position: absolute
@@ -127,8 +124,9 @@ aside
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
   z-index: 1000
 
+
 .projets
-  background-color: #333333a9
+  background-color: #333
   width: 98%
   height: 72%
   border-radius: 7px
@@ -177,24 +175,113 @@ aside
 main
   height: 100%
 
-.icon
-  font-size: 2.2em
 
-@media (max-width: 1200px)
+@media (min-width: 2050px)
+  .icon
+    font-size: 4em
+  .surMoi
+    font-size: 75px
+  .titreProjet
+    font-size: 200px
+  #debut
+    font-size: 100px
+  .blocText
+    font-size: 50px
+  #linkcv
+    a
+      font-size: 60px
+
+@media (max-width: 2049px) and (min-width: 1401px)
+  .icon
+    font-size: 3.2em
+  .surMoi
+    font-size: 65px
+  .titreProjet
+    font-size: 190px
+  #debut
+    font-size: 80px
+  .blocText
+    font-size: 40px
+  #linkcv
+    a
+      font-size: 50px
+
+@media (max-width: 1400px) and (min-width: 1201px)
+  .icon
+    font-size: 3em
+  .surMoi
+    font-size: 55px
+  .titreProjet
+    font-size: 180px
+  #debut
+    font-size: 70px
+  .blocText
+    font-size: 35px
+  #linkcv
+    a
+      font-size: 40px
+  
+
+@media (max-width: 1200px) and (min-width: 993px)
   .icon
     font-size: 2em
+  .surMoi
+    font-size: 40px
+  .titreProjet
+    font-size: 160px
+  #debut
+    font-size: 60px
+  .blocText
+    font-size: 30px
+  #linkcv
+    a
+      font-size: 35px
 
-@media (max-width: 992px)
+@media (max-width: 992px) and (min-width: 769px)
   .icon
     font-size: 1.7em
+  .surMoi
+    font-size: 30px
+  .titreProjet
+    font-size: 140px
+  #debut
+    font-size: 45px
+  .blocText
+    font-size: 25px
+  #linkcv
+    a
+      font-size: 30px
 
-@media (max-width: 768px)
+@media (max-width: 768px) and (min-width: 577px)
   .icon
     font-size: 1.5em
+  .surMoi
+    font-size: 25px
+  .titreProjet
+    font-size: 120px
+  #debut
+    font-size: 35px
+  .blocText
+    font-size: 20px
+  #linkcv
+    a
+      font-size: 25px
 
 @media (max-width: 576px)
   .icon
     font-size: 1.2em
+  .surMoi
+    font-size: 20px
+  .titreProjet
+    font-size: 100px
+  #debut
+    font-size: 30px
+  .blocText
+    font-size: 15px
+  #linkcv
+    a
+      font-size: 20px
+
 
 .texteCV
   display: flex
@@ -210,14 +297,14 @@ main
   align-items: center
   .blocText
     width: 90%
-    background-color: #333333a9
+    background-color: #333
     height: 75%
     border-radius: 9px
     color: #FEFEFE
     font-family: Open Sans, sans-serif
-    font-size: 37px
     padding: 28px
     z-index: 2
+
 
 #linkcv
   width: 50%
@@ -226,11 +313,12 @@ main
   justify-content: center
   align-items: center
   z-index: 2
+
   a
     text-decoration: none
     min-width: 70%
     min-height: 10%
-    background-color: #333333dc
+    background-color: #333
     border-radius: 7px
     padding: 20px
     display: flex
@@ -239,7 +327,6 @@ main
     justify-content: center
     color: #FEFEFE
     font-family: Open Sans, sans-serif
-    font-size: 45px
     cursor: pointer
     transition: transform 0.35s ease-in-out
     &:hover
@@ -257,7 +344,7 @@ main
 
 #form
   padding: 30px
-  background-color: #333333a9
+  background-color: #333
   border-radius: 9px
   width: 80%
   height: 90%
@@ -298,7 +385,7 @@ main
 
 .blocTextForm
   width: 80%
-  background-color: #333333a9
+  background-color: #333
   height: 80%
   border-radius: 9px
   color: #FEFEFE
@@ -309,9 +396,6 @@ main
   display: flex
   align-items: center
   flex-direction: column
-
-#debut
-  font-size: 90px
 
 #mejoindre
   margin-bottom: 2%

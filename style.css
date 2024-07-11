@@ -34,12 +34,14 @@ aside {
   justify-content: center;
   align-items: center;
 }
+
 aside section {
   padding: 10px;
   margin-top: 40px;
   align-self: center;
   text-align: center;
 }
+
 aside section a {
   text-decoration: none;
   color: white;
@@ -49,6 +51,7 @@ aside section a {
   flex-direction: column;
   align-items: center;
 }
+
 aside section a span {
   margin-top: 12px;
 }
@@ -84,10 +87,10 @@ aside section a span {
   position: relative;
   z-index: 1;
 }
+
 .sepIndex .nom .surMoi {
   box-sizing: border-box;
   text-align: center;
-  font-size: 50px;
   color: #FEFEFE;
   font-family: Open Sans, sans-serif;
 }
@@ -101,10 +104,10 @@ aside section a span {
   position: relative;
   z-index: 1;
 }
+
 .sepIndex .listProj .surMoi {
   box-sizing: border-box;
   text-align: center;
-  font-size: 50px;
   color: #FEFEFE;
   font-family: Open Sans, sans-serif;
 }
@@ -118,7 +121,6 @@ aside section a span {
   margin-left: 2%;
   color: #FEFEFE;
   font-family: Open Sans, sans-serif;
-  font-size: 200px;
 }
 
 #dropdown {
@@ -142,7 +144,7 @@ aside section a span {
 }
 
 .projets {
-  background-color: rgba(51, 51, 51, 0.662745098);
+  background-color: #333;
   width: 98%;
   height: 72%;
   border-radius: 7px;
@@ -152,18 +154,20 @@ aside section a span {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .projets a {
   width: 22%;
   height: 40%;
   margin: 1%;
   transition: transform 0.35s ease-in-out;
 }
+
 .projets a:hover {
   transform: scale(1.1);
 }
+
 .projets a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border: 10px solid black;
@@ -179,6 +183,7 @@ aside section a span {
   font-size: 30px;
   cursor: pointer;
 }
+
 .dropdown-item:hover {
   background-color: #575757;
 }
@@ -201,30 +206,153 @@ main {
   height: 100%;
 }
 
-.icon {
-  font-size: 2.2em;
+@media (min-width: 2050px) {
+  .icon {
+    font-size: 4em;
+  }
+  .surMoi {
+    font-size: 75px;
+  }
+  .titreProjet {
+    font-size: 200px;
+  }
+  #debut {
+    font-size: 100px;
+  }
+  .blocText {
+    font-size: 50px;
+  }
+  #linkcv a {
+    font-size: 60px;
+  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2049px) and (min-width: 1401px) {
+  .icon {
+    font-size: 3.2em;
+  }
+  .surMoi {
+    font-size: 65px;
+  }
+  .titreProjet {
+    font-size: 190px;
+  }
+  #debut {
+    font-size: 80px;
+  }
+  .blocText {
+    font-size: 40px;
+  }
+  #linkcv a {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1201px) {
+  .icon {
+    font-size: 3em;
+  }
+  .surMoi {
+    font-size: 55px;
+  }
+  .titreProjet {
+    font-size: 180px;
+  }
+  #debut {
+    font-size: 70px;
+  }
+  .blocText {
+    font-size: 35px;
+  }
+  #linkcv a {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
   .icon {
     font-size: 2em;
   }
+  .surMoi {
+    font-size: 40px;
+  }
+  .titreProjet {
+    font-size: 160px;
+  }
+  #debut {
+    font-size: 60px;
+  }
+  .blocText {
+    font-size: 30px;
+  }
+  #linkcv a {
+    font-size: 35px;
+  }
 }
-@media (max-width: 992px) {
+
+@media (max-width: 992px) and (min-width: 769px) {
   .icon {
     font-size: 1.7em;
   }
+  .surMoi {
+    font-size: 30px;
+  }
+  .titreProjet {
+    font-size: 140px;
+  }
+  #debut {
+    font-size: 45px;
+  }
+  .blocText {
+    font-size: 25px;
+  }
+  #linkcv a {
+    font-size: 30px;
+  }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 768px) and (min-width: 577px) {
   .icon {
     font-size: 1.5em;
   }
+  .surMoi {
+    font-size: 25px;
+  }
+  .titreProjet {
+    font-size: 120px;
+  }
+  #debut {
+    font-size: 35px;
+  }
+  .blocText {
+    font-size: 20px;
+  }
+  #linkcv a {
+    font-size: 25px;
+  }
 }
+
 @media (max-width: 576px) {
   .icon {
     font-size: 1.2em;
   }
+  .surMoi {
+    font-size: 20px;
+  }
+  .titreProjet {
+    font-size: 100px;
+  }
+  #debut {
+    font-size: 30px;
+  }
+  .blocText {
+    font-size: 15px;
+  }
+  #linkcv a {
+    font-size: 20px;
+  }
 }
+
 .texteCV {
   display: flex;
   flex-direction: row;
@@ -239,14 +367,14 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .presentation .blocText {
   width: 90%;
-  background-color: rgba(51, 51, 51, 0.662745098);
+  background-color: #333;
   height: 75%;
   border-radius: 9px;
   color: #FEFEFE;
   font-family: Open Sans, sans-serif;
-  font-size: 37px;
   padding: 28px;
   z-index: 2;
 }
@@ -259,11 +387,12 @@ main {
   align-items: center;
   z-index: 2;
 }
+
 #linkcv a {
   text-decoration: none;
   min-width: 70%;
   min-height: 10%;
-  background-color: rgba(51, 51, 51, 0.862745098);
+  background-color: #333;
   border-radius: 7px;
   padding: 20px;
   display: flex;
@@ -272,13 +401,14 @@ main {
   justify-content: center;
   color: #FEFEFE;
   font-family: Open Sans, sans-serif;
-  font-size: 45px;
   cursor: pointer;
   transition: transform 0.35s ease-in-out;
 }
+
 #linkcv a:hover {
   transform: scale(1.1);
 }
+
 #linkcv a i {
   margin-left: 30%;
 }
@@ -294,7 +424,7 @@ main {
 
 #form {
   padding: 30px;
-  background-color: rgba(51, 51, 51, 0.662745098);
+  background-color: #333;
   border-radius: 9px;
   width: 80%;
   height: 90%;
@@ -305,6 +435,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 #form label {
   display: block;
   color: #FEFEFE;
@@ -313,6 +444,7 @@ main {
   margin-bottom: 10px;
   width: 100%;
 }
+
 #form input {
   width: 100%;
   padding: 10px;
@@ -323,24 +455,27 @@ main {
   font-family: Open Sans, sans-serif;
   box-sizing: border-box;
 }
+
 #form textarea {
   height: 30%;
   width: 100%;
   font-size: 18px;
 }
-#form input[type=submit] {
+
+#form input[type="submit"] {
   background-color: #575757;
   color: #FEFEFE;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-#form input[type=submit]:hover {
+
+#form input[type="submit"]:hover {
   background-color: #424242;
 }
 
 .blocTextForm {
   width: 80%;
-  background-color: rgba(51, 51, 51, 0.662745098);
+  background-color: #333;
   height: 80%;
   border-radius: 9px;
   color: #FEFEFE;
@@ -351,10 +486,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-#debut {
-  font-size: 90px;
 }
 
 #mejoindre {
@@ -381,6 +512,7 @@ main {
   font-family: Open Sans, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 #sendForm:hover {
   background: linear-gradient(135deg, #424242, #575757);
   transform: scale(1.05);
@@ -394,6 +526,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .btnLink i {
   margin-top: 10%;
   font-size: 250px;
@@ -407,12 +540,14 @@ main {
   align-items: center;
   z-index: 2;
 }
+
 #linkContact a {
   text-decoration: none;
   padding: 20px;
   cursor: pointer;
   transition: transform 0.35s ease-in-out;
 }
+
 #linkContact a:hover {
   transform: scale(1.1);
 }
@@ -431,6 +566,7 @@ main {
   border-radius: 8px;
   background-color: #c0bfbf;
 }
+
 .popup img {
   height: 75%;
   border-radius: 8px;
@@ -439,6 +575,7 @@ main {
   border: solid black 4px;
   margin-top: 4%;
 }
+
 .popup div a {
   color: white;
   background-color: #333;
@@ -450,6 +587,7 @@ main {
   max-height: 2%;
   max-width: 14%;
 }
+
 .popup div #chef2 {
   color: white;
   background-color: #333;
@@ -474,13 +612,16 @@ main {
   padding: 0 20px;
   font-family: Open Sans, sans-serif;
 }
+
 .popup-text a {
   text-decoration: none;
 }
+
 .popup-text h2 {
   font-size: 45px;
   margin-bottom: 10px;
 }
+
 .popup-text p {
   font-size: 25px;
   line-height: 1.6;
@@ -502,6 +643,7 @@ main {
   right: 10px;
   margin-right: 18px;
 }
+
 .close-btn:hover {
   background-color: #555;
-}/*# sourceMappingURL=style.css.map */
+}
