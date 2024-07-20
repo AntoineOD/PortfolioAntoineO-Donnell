@@ -51,7 +51,7 @@
                         <div class="titreProjet">
                             Projets
                         </div>
-                        <div id="dropdown" x-data="{ open: false, filter: 'all' }" class="dropdown">
+                        <!--<div id="dropdown" x-data="{ open: false, filter: 'all' }" class="dropdown">
                             <i @click="open = !open" @click.away="open = false" class="fa-regular fa-square-caret-down icon" style="color: #FEFEFE; cursor: pointer;"></i>
                             <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="dropdown-menu">
                                 <div class="dropdown-item" @click="filter = 'all'; open = false">All</div>
@@ -59,7 +59,7 @@
                                 <div class="dropdown-item" @click="filter = 'category2'; open = false">Category 2</div>
                                 <div class="dropdown-item" @click="filter = 'category3'; open = false">Category 3</div>
                             </div>
-                        </div>
+                        </div>!-->
                     </div>
                     <div class="projets" x-data="{ openProject: null }">
                         <a @click="openProject = 1">
@@ -85,8 +85,8 @@
                                             Le site n'est malheureusement plus disponible. Les liens ci-dessous mènent vers 
                                             le GitHub des deux projets. J'ai principalement contribué à l'application web.
                                         </p>
-                                        <a href="https://github.com/Lsthilaire0189/tch-099-01" class="btn">Lien vers le github du projet web</a>
-                                        <a id="chef2" href="https://github.com/Lsthilaire0189/ChefChatter" class="btn">Lien vers le github du projet mobile</a>
+                                        <a href="https://github.com/Lsthilaire0189/tch-099-01" class="btn">Projet Web</a>
+                                        <a id="chef2" href="https://github.com/Lsthilaire0189/ChefChatter" class="btn">PowerPoint</a>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                             Ce projet a été réalisé dans Unity en C#. Le lien ci-dessous mène vers un PowerPoint que nous avons utilisé 
                                             pour présenter le projet aux professeurs.
                                         </p>
-                                        <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ" class="btn">Lien vers le PowerPoint</a>
+                                        <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ" class="btn">PowerPoint</a>
                                     </div>
                                 </div>
                             </div>

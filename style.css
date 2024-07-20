@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   height: 100%;
   width: 100%;
@@ -132,17 +133,15 @@ aside section a span {
   margin-right: 5%;
 }
 
-.dropdown-menu {
-  position: absolute;
-  width: 200px;
-  top: 40px;
-  right: 0;
-  background-color: #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
+/*.dropdown-menu
+  position: absolute
+  width: 200px
+  top: 40px
+  right: 0
+  background-color: #333
+  border-radius: 8px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  z-index: 1000 */
 .projets {
   background-color: #333;
   width: 98%;
@@ -206,49 +205,42 @@ main {
   height: 100%;
 }
 
-@media (min-width: 2050px) {
+/* horizontale */
+@media (min-width: 1200px) {
   .icon {
-    font-size: 4em;
+    font-size: 3em;
   }
   .surMoi {
     font-size: 75px;
   }
   .titreProjet {
-    font-size: 200px;
+    font-size: 175px;
   }
   #debut {
-    font-size: 100px;
+    font-size: 55px;
   }
   .blocText {
-    font-size: 50px;
-  }
-  #linkcv a {
-    font-size: 60px;
-  }
-}
-
-@media (max-width: 2049px) and (min-width: 1401px) {
-  .icon {
-    font-size: 3.2em;
-  }
-  .surMoi {
-    font-size: 65px;
-  }
-  .titreProjet {
-    font-size: 190px;
-  }
-  #debut {
-    font-size: 80px;
-  }
-  .blocText {
-    font-size: 40px;
+    font-size: 35px;
   }
   #linkcv a {
     font-size: 50px;
   }
+  .popup-text a {
+    font-size: 15px;
+  }
+  .popup-text h2 {
+    font-size: 30px;
+  }
+  .popup-text p {
+    font-size: 18px;
+  }
+  .popup img {
+    height: 75%;
+    max-width: 50%;
+  }
 }
 
-@media (max-width: 1400px) and (min-width: 1201px) {
+@media (max-width: 1199.98px) and (min-width: 992px) {
   .icon {
     font-size: 3em;
   }
@@ -256,20 +248,33 @@ main {
     font-size: 55px;
   }
   .titreProjet {
-    font-size: 180px;
+    font-size: 160px;
   }
   #debut {
-    font-size: 70px;
+    font-size: 45px;
   }
   .blocText {
-    font-size: 35px;
+    font-size: 28px;
   }
   #linkcv a {
-    font-size: 40px;
+    font-size: 35px;
+  }
+  .popup-text a {
+    font-size: 15px;
+  }
+  .popup-text h2 {
+    font-size: 28px;
+  }
+  .popup-text p {
+    font-size: 16px;
+  }
+  .popup img {
+    height: 75%;
+    max-width: 45%;
   }
 }
 
-@media (max-width: 1200px) and (min-width: 993px) {
+@media (max-width: 991.98px) and (min-width: 768px) {
   .icon {
     font-size: 2em;
   }
@@ -280,38 +285,30 @@ main {
     font-size: 160px;
   }
   #debut {
-    font-size: 50px;
+    font-size: 40px;
   }
   .blocText {
-    font-size: 25px;
-  }
-  #linkcv a {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 992px) and (min-width: 769px) {
-  .icon {
-    font-size: 1.7em;
-  }
-  .surMoi {
-    font-size: 30px;
-  }
-  .titreProjet {
-    font-size: 140px;
-  }
-  #debut {
-    font-size: 35px;
-  }
-  .blocText {
-    font-size: 20px;
+    font-size: 22px;
   }
   #linkcv a {
     font-size: 25px;
   }
+  .popup-text a {
+    font-size: 12px;
+  }
+  .popup-text h2 {
+    font-size: 26px;
+  }
+  .popup-text p {
+    font-size: 14pxà;
+  }
+  .popup img {
+    height: 75%;
+    max-width: 40%;
+  }
 }
 
-@media (max-width: 768px) and (min-width: 577px) {
+@media (max-width: 767.98px) and (min-width: 576px) {
   .icon {
     font-size: 1.5em;
   }
@@ -322,17 +319,30 @@ main {
     font-size: 75px;
   }
   #debut {
-    font-size: 25px;
+    font-size: 32px;
   }
   .blocText {
-    font-size: 15px;
+    font-size: 20px;
   }
   #linkcv a {
-    font-size: 20px;
+    font-size: 15px;
+  }
+  .popup-text a {
+    font-size: 12px;
+  }
+  .popup-text h2 {
+    font-size: 23px;
+  }
+  .popup-text p {
+    font-size: 14px;
+  }
+  .popup img {
+    height: 75%;
+    max-width: 30%;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .icon {
     font-size: 1.2em;
   }
@@ -343,13 +353,176 @@ main {
     font-size: 50px;
   }
   #debut {
-    font-size: 15px;
+    font-size: 25px;
   }
   .blocText {
-    font-size: 9px;
+    font-size: 14px;
   }
   #linkcv a {
     font-size: 10px;
+  }
+  .popup-text a {
+    font-size: 12px;
+  }
+  .popup-text h2 {
+    font-size: 23px;
+  }
+  .popup-text p {
+    font-size: 13px;
+  }
+  .popup img {
+    height: 75%;
+    max-width: 30%;
+  }
+}
+
+/* verticale */
+@media (max-height: 600px) {
+  .icon {
+    font-size: 0.9em;
+  }
+  .surMoi {
+    font-size: 8px;
+  }
+  .titreProjet {
+    font-size: 40px;
+  }
+  #debut {
+    font-size: 35px;
+  }
+  .blocText {
+    font-size: 25px;
+  }
+  #linkcv a {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) and (max-height: 600px) {
+  .icon {
+    font-size: 1.5em;
+  }
+  .surMoi {
+    font-size: 25px;
+  }
+  .titreProjet {
+    font-size: 75px;
+  }
+  #debut {
+    font-size: 32px;
+  }
+  .blocText {
+    font-size: 20px;
+  }
+  #linkcv a {
+    font-size: 15px;
+  }
+}
+
+/* Small devices with small height */
+@media (min-width: 576px) and (max-width: 767.98px) and (max-height: 600px) {
+  .icon {
+    font-size: 1.2em;
+  }
+  .surMoi {
+    font-size: 20px;
+  }
+  .titreProjet {
+    font-size: 60px;
+  }
+  #debut {
+    font-size: 25px;
+  }
+  .blocText {
+    font-size: 15px;
+  }
+  #linkcv a {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices with small height */
+@media (max-width: 575.98px) and (max-height: 600px) {
+  .icon {
+    font-size: 1em;
+  }
+  .surMoi {
+    font-size: 8px;
+  }
+  .titreProjet {
+    font-size: 40px;
+  }
+  #debut {
+    font-size: 20px;
+  }
+  .blocText {
+    font-size: 12px;
+  }
+  #linkcv a {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) and (max-height: 800px) and (min-height: 601px) {
+  .icon {
+    font-size: 1.8em;
+  }
+  .surMoi {
+    font-size: 30px;
+  }
+  .titreProjet {
+    font-size: 85px;
+  }
+  #debut {
+    font-size: 35px;
+  }
+  .blocText {
+    font-size: 22px;
+  }
+  #linkcv a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) and (max-height: 800px) and (min-height: 601px) {
+  .icon {
+    font-size: 1.3em;
+  }
+  .surMoi {
+    font-size: 22px;
+  }
+  .titreProjet {
+    font-size: 65px;
+  }
+  #debut {
+    font-size: 27px;
+  }
+  .blocText {
+    font-size: 17px;
+  }
+  #linkcv a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) and (max-height: 800px) and (min-height: 601px) {
+  .icon {
+    font-size: 1.1em;
+  }
+  .surMoi {
+    font-size: 9px;
+  }
+  .titreProjet {
+    font-size: 45px;
+  }
+  #debut {
+    font-size: 20px;
+  }
+  .blocText {
+    font-size: 13px;
+  }
+  #linkcv a {
+    font-size: 9px;
   }
 }
 
@@ -568,12 +741,11 @@ main {
 }
 
 .popup img {
-  height: 75%;
   border-radius: 8px;
-  max-width: 50%;
   display: block;
   border: solid black 4px;
   margin-top: 4%;
+  object-fit: cover;
 }
 
 .popup div a {
@@ -581,11 +753,12 @@ main {
   background-color: #333;
   border-radius: 6px;
   padding: 18px;
-  position: absolute;
+  position: sticky;
   bottom: 10px;
-  left: 10px;
+  left: 0px;
   max-height: 2%;
   max-width: 14%;
+  margin-top: 25px;
 }
 
 .popup div #chef2 {
@@ -593,11 +766,12 @@ main {
   background-color: #333;
   border-radius: 6px;
   padding: 18px;
-  position: absolute;
+  position: sticky;
   bottom: 10px;
   left: 20%;
   max-height: 2%;
   max-width: 14%;
+  margin-top: 25px;
 }
 
 .popup-content {
@@ -618,14 +792,13 @@ main {
 }
 
 .popup-text h2 {
-  font-size: 45px;
   margin-bottom: 10px;
 }
 
 .popup-text p {
-  font-size: 25px;
   line-height: 1.6;
   color: #333;
+  margin-bottom: 10%;
 }
 
 .close-btn {
