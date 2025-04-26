@@ -68,6 +68,9 @@
                         <a @click="openProject = 2">
                             <img src="https://i.imghippo.com/files/P1shW1720560279.png" alt="Project Image">
                         </a>
+                        <a @click="openProject = 3">
+                            <img src="https://i.imghippo.com/files/nOUc5586f.png" alt="Project Image">
+                        </a>
                         <template x-if="openProject === 1">
                             <div class="popup">
                                 <button class="close-btn" @click="openProject = null">Retour</button>
@@ -108,6 +111,28 @@
                                             pour présenter le projet aux professeurs.
                                         </p>
                                         <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ" class="btn">PowerPoint</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="openProject === 3">
+                            <div class="popup">
+                                <button class="close-btn" @click="openProject = null">Retour</button>
+                                <div class="popup-content">
+                                    <img src="https://i.imghippo.com/files/AyC5871fD.jpg" alt="Popup Image">
+                                    <div class="popup-text">
+                                        <h2>Mon premier stage, centre d'essais en vol d'Airbus Canada</h2>
+                                        <p>
+                                            Mon premier stage avec l'ÉTS s'est déroulé chez Airbus Canada, plus particulièrement au Centre d’essais en vol,
+                                            où j’ai eu pour mandat de développer un outil permettant de faire le suivi de la configuration de plusieurs
+                                            moyens d’essai, qu’il s’agisse d’un avion ou d’un simulateur.
+                                            Ce stage m’a permis d’échanger abondamment avec toutes les équipes responsables de la maintenance des avions
+                                            et des simulateurs, afin de définir des requis précis pour mon application.
+                                            J’y ai également beaucoup appris sur le monde de l’aéronautique et des simulateurs de vol, en échangeant
+                                            avec les ingénieurs responsables des multiples tests sur moyens d’essai.
+                                            J’ai aussi développé plusieurs autres applications pour différents groupes de l’équipe.
+                                            Pour plus d’informations sur ce stage, n’hésitez pas à me contacter !
+                                        </p>
                                     </div>
                                 </div>
                             </div>
