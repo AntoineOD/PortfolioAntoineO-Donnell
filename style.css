@@ -207,22 +207,22 @@ main {
 /* 1920 x 1080 */
 @media (min-width: 1920px) and (min-height: 1080px) {
   .icon {
-    font-size: 3em;
+    font-size: 4em;
   }
   .surMoi {
-    font-size: 75px;
+    font-size: 120px;
   }
   .titreProjet {
-    font-size: 175px;
+    font-size: 190px;
   }
   #debut {
-    font-size: 55px;
+    font-size: 70px;
   }
   .blocText {
-    font-size: 35px;
+    font-size: 50px;
   }
   #linkcv a {
-    font-size: 50px;
+    font-size: 75px;
   }
   .popup-text a {
     font-size: 15px;
