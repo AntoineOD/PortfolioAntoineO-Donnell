@@ -4,7 +4,6 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #424242;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +13,6 @@ html, body {
   display: flex;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .listProj {
@@ -34,14 +32,12 @@ aside {
   justify-content: center;
   align-items: center;
 }
-
 aside section {
   padding: 10px;
   margin-top: 40px;
   align-self: center;
   text-align: center;
 }
-
 aside section a {
   text-decoration: none;
   color: white;
@@ -51,7 +47,6 @@ aside section a {
   flex-direction: column;
   align-items: center;
 }
-
 aside section a span {
   margin-top: 12px;
 }
@@ -87,7 +82,6 @@ aside section a span {
   position: relative;
   z-index: 1;
 }
-
 .sepIndex .nom .surMoi {
   box-sizing: border-box;
   text-align: center;
@@ -104,7 +98,6 @@ aside section a span {
   position: relative;
   z-index: 1;
 }
-
 .sepIndex .listProj .surMoi {
   box-sizing: border-box;
   text-align: center;
@@ -132,15 +125,6 @@ aside section a span {
   margin-right: 5%;
 }
 
-/*.dropdown-menu
-  position: absolute
-  width: 200px
-  top: 40px
-  right: 0
-  background-color: #333
-  border-radius: 8px
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-  z-index: 1000 */
 .projets {
   background-color: #333;
   width: 98%;
@@ -151,27 +135,26 @@ aside section a span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 1rem;
 }
-
 .projets a {
-  width: 22%;
-  height: 40%;
+  width: 20%;
+  height: 30%;
   margin: 1%;
   transition: transform 0.35s ease-in-out;
 }
-
 .projets a:hover {
   transform: scale(1.1);
 }
-
 .projets a img {
-  object-fit: scale-down;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   width: 100%;
   height: 100%;
   border: 10px solid black;
   margin: 30px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #5e5e5e;
 }
 
 .dropdown-item {
@@ -181,7 +164,6 @@ aside section a span {
   font-size: 30px;
   cursor: pointer;
 }
-
 .dropdown-item:hover {
   background-color: #575757;
 }
@@ -240,7 +222,6 @@ main {
     font-size: 190px;
   }
 }
-
 @media (max-width: 1600px) {
   .icon {
     font-size: 3.1em;
@@ -277,7 +258,6 @@ main {
     font-size: 190px;
   }
 }
-
 @media (max-width: 1440px) {
   .icon {
     font-size: 3em;
@@ -314,7 +294,6 @@ main {
     font-size: 160px;
   }
 }
-
 @media (max-width: 1366px) {
   .icon {
     font-size: 3em;
@@ -351,7 +330,6 @@ main {
     font-size: 160px;
   }
 }
-
 @media (max-width: 1280px) {
   .icon {
     font-size: 3em;
@@ -388,7 +366,6 @@ main {
     font-size: 160px;
   }
 }
-
 @media (max-width: 1000px) {
   .icon {
     font-size: 2.4em;
@@ -425,7 +402,6 @@ main {
     font-size: 130px;
   }
 }
-
 @media (max-width: 600px) {
   .icon {
     font-size: 2em;
@@ -462,7 +438,6 @@ main {
     font-size: 50px;
   }
 }
-
 .texteCV {
   display: flex;
   flex-direction: row;
@@ -477,7 +452,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .presentation .blocText {
   width: 90%;
   background-color: #333;
@@ -497,7 +471,6 @@ main {
   align-items: center;
   z-index: 2;
 }
-
 #linkcv a {
   text-decoration: none;
   min-width: 70%;
@@ -514,11 +487,9 @@ main {
   cursor: pointer;
   transition: transform 0.35s ease-in-out;
 }
-
 #linkcv a:hover {
   transform: scale(1.1);
 }
-
 #linkcv a i {
   margin-left: 30%;
 }
@@ -545,7 +516,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 #form label {
   display: block;
   color: #FEFEFE;
@@ -554,7 +524,6 @@ main {
   margin-bottom: 10px;
   width: 100%;
 }
-
 #form input {
   width: 100%;
   padding: 10px;
@@ -565,21 +534,18 @@ main {
   font-family: Open Sans, sans-serif;
   box-sizing: border-box;
 }
-
 #form textarea {
   height: 30%;
   width: 100%;
   font-size: 18px;
 }
-
-#form input[type="submit"] {
+#form input[type=submit] {
   background-color: #575757;
   color: #FEFEFE;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-#form input[type="submit"]:hover {
+#form input[type=submit]:hover {
   background-color: #424242;
 }
 
@@ -622,7 +588,6 @@ main {
   font-family: Open Sans, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 #sendForm:hover {
   background: linear-gradient(135deg, #424242, #575757);
   transform: scale(1.05);
@@ -637,7 +602,6 @@ main {
   align-items: center;
   margin-right: 10%;
 }
-
 .btnLink i {
   margin-top: 10%;
   font-size: 250px;
@@ -651,65 +615,64 @@ main {
   align-items: center;
   z-index: 2;
 }
-
 #linkContact a {
   text-decoration: none;
   padding: 20px;
   cursor: pointer;
   transition: transform 0.35s ease-in-out;
 }
-
 #linkContact a:hover {
   transform: scale(1.1);
 }
 
 .popup {
   position: fixed;
+  z-index: 1001;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 65%;
-  height: 45%;
+  width: 70%;
+  height: 55%;
   overflow-y: auto;
-  z-index: 1000;
-  border-radius: 8px;
-  background-color: #c0bfbf;
+  border-radius: 13px;
+  border: 2px solid #CC6B2C;
+  background-color: #424242;
 }
-
 .popup img {
   border-radius: 8px;
   display: block;
   border: solid black 4px;
   margin-top: 4%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
+.popup div {
+  margin-bottom: 7%;
+}
 .popup div a {
   color: white;
   background-color: #333;
   border-radius: 6px;
+  border: 2px solid black;
   padding: 18px;
-  position: sticky;
-  bottom: 10px;
-  left: 0px;
   max-height: 2%;
   max-width: 14%;
-  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-left: 0px;
 }
 
-.popup div #chef2 {
-  color: white;
-  background-color: #333;
-  border-radius: 6px;
-  padding: 18px;
-  position: sticky;
-  bottom: 10px;
-  left: 20%;
-  max-height: 2%;
-  max-width: 14%;
-  margin-top: 25px;
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
 }
 
 .popup-content {
@@ -724,19 +687,25 @@ main {
   padding: 0 20px;
   font-family: Open Sans, sans-serif;
 }
-
 .popup-text a {
   text-decoration: none;
 }
-
 .popup-text h2 {
   margin-bottom: 10px;
+  color: #FEFEFE;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
 }
-
 .popup-text p {
   line-height: 1.6;
-  color: #333;
-  margin-bottom: 10%;
+  color: #FEFEFE;
+  margin-bottom: 5%;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .close-btn {
@@ -748,13 +717,12 @@ main {
   font-size: 16px;
   border-radius: 4px;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 10px;
   margin-right: 18px;
 }
-
 .close-btn:hover {
   background-color: #555;
 }
@@ -764,3 +732,49 @@ main {
   z-index: 9;
   margin-left: 7%;
 }
+
+.project-title {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #FEFEFE;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-img-box {
+  position: relative;
+  display: inline-block;
+}
+
+.project-img-box:hover .project-title {
+  display: blockS;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */
