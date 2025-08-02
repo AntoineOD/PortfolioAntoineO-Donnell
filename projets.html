@@ -79,6 +79,11 @@
                             <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/shuttersvs.webp"
                                 alt="Project Image">
                         </a>
+                        <a @click="openProject = 5" class="tooltip">
+                            <span class="tooltiptext">Simulateur de vol Unreal Engine</span>
+                            <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/planepic.webp"
+                                alt="Project Image">
+                        </a>
                         <template x-if="openProject === 1">
                             <div>
                                 <div class="popup-backdrop"></div>
@@ -208,6 +213,43 @@
                                                 class="btn">Page officiel du mod</a>
                                             <a href="https://github.com/AntoineOD/VintageStoryMod-_-WoodenShutters"
                                                 class="btn">Github du mod</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                         <template x-if="openProject === 5">
+                            <div>
+                                <div class="popup-backdrop"></div>
+                                <div class="popup">
+                                    <button class="close-btn" @click="openProject = null">Retour</button>
+                                    <div class="popup-content">
+                                        <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/planepic.webp"
+                                            alt="Popup Image">
+                                        <div class="popup-text">
+                                            <h2>Création d'un petit simulateur de vol sur Unreal Engine</h2>
+                                            <p>
+                                                J'ai toujours eu une passion pour les simulateurs de vol. Je suis captivé
+                                                par la physique et le développement de ces derniers, et les simulateurs que j'ai pu
+                                                voir pendant mon stage 1 chez Airbus m'ont épaté par la précision qu'ils peuvent 
+                                                atteindre.
+
+                                                J'ai donc décidé de créer mon propre petit simulateur sur Unreal Engine pour
+                                                pouvoir, premièrement, me familiariser avec les formules physiques du domaine
+                                                qui s’appliquent à un objet, et deuxièmement, commencer à travailler en C++,
+                                                un langage qui n'est pas vraiment enseigné dans mon programme à l'école.
+                                                J'ai aussi, en parallèle, appris un peu à utiliser le logiciel Blender pour créer mon propre
+                                                modèle d'avion.
+
+                                                Le lien ci-dessous mène au répertoire GitHub de mon code source concernant
+                                                l'acteur principal, mon avion, et toutes les formules physiques qui s'appliquent à ce
+                                                dernier. Un autre lien mène à une vidéo d'une petite démonstration du simulateur
+                                                en action.
+                                            </p>
+                                            <a href="https://github.com/AntoineOD/FlightSimUnreal"
+                                                class="btn">Lien vers le GitHub</a>
+                                            <a href="https://drive.google.com/file/d/13ihOLN9oR2D07l9uG8_nk83m9Moo2gpm/view?usp=sharing"
+                                                class="btn">Lien vers la démonstration</a>
                                         </div>
                                     </div>
                                 </div>
