@@ -84,6 +84,11 @@
                             <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/planepic.webp"
                                 alt="Project Image">
                         </a>
+                        <a @click="openProject = 6" class="tooltip">
+                            <span class="tooltiptext">Initiation à OpenGL</span>
+                            <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/openGLIMG.webp"
+                                alt="Project Image">
+                        </a>
                         <template x-if="openProject === 1">
                             <div>
                                 <div class="popup-backdrop"></div>
@@ -250,6 +255,32 @@
                                                 class="btn">Lien vers le GitHub</a>
                                             <a href="https://drive.google.com/file/d/13ihOLN9oR2D07l9uG8_nk83m9Moo2gpm/view?usp=sharing"
                                                 class="btn">Lien vers la démonstration</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="openProject === 6">
+                            <div>
+                                <div class="popup-backdrop"></div>
+                                <div class="popup">
+                                    <button class="close-btn" @click="openProject = null">Retour</button>
+                                    <div class="popup-content">
+                                        <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/openglscn.webp"
+                                            alt="Popup Image">
+                                        <div class="popup-text">
+                                            <h2>Rapport d'apprentisaage OpenGL</h2>
+                                            <p>
+                                                    Pendant une fin de semaine, j'ai décidé d'apprendre les bases d'OpenGL.
+                                                    J'ai donc suivi un tutoriel en ligne pour pouvoir rapidement apprendre les
+                                                    bases de cette API graphique. J'ai appris à créer une fenêtre, à y dessiner des formes
+                                                    simples, à appliquer des textures, et à manipuler une caméra. J'ai aussi appris à importer
+                                                    des modèles 3D et à manipuler la lumière dans une scène 3D.
+                                                    Le lien ci-dessous mène au rapport d'apprentissage que j'ai rédigé après avoir
+                                                    complété le tutoriel.
+                                            </p>
+                                            <a href="https://drive.google.com/file/d/1SigM43kqxpRdXbBXh1cVUlCQe9K39bX5/view?usp=sharing"
+                                                class="btn">Lien vers le rapport</a>
                                         </div>
                                     </div>
                                 </div>
