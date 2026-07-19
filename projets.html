@@ -8,13 +8,23 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5a4d3f2602.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         particlesJS.load('particles-js', 'particles.json', function () {
             console.log('particles.js loaded - callback');
         });
     </script>
-    <script src="zoom.js"></script>
+
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light-theme');
+        }
+        function toggleTheme(e) {
+            if (e) e.preventDefault();
+            document.documentElement.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.documentElement.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+    </script>
 </head>
 
 <body>
@@ -49,6 +59,13 @@
                         <span>Contact</span>
                     </a>
                 </section>
+                <div style="flex-grow: 1;"></div>
+                <section style="display: inline-block; margin-bottom: 20px;">
+                    <a href="#" id="theme-toggle" onclick="toggleTheme(event)">
+                        <i class="fa-solid fa-circle-half-stroke icon"></i>
+                        <span>Theme</span>
+                    </a>
+                </section>
             </aside>
             <div class="main-wrapper">
                 <div id="particles-js"></div>
@@ -70,7 +87,7 @@
                                 alt="Project Image">
                         </a>
                         <a @click="openProject = 3" class="tooltip">
-                            <span class="tooltiptext">Stage 1: Airbus</span>
+                            <span class="tooltiptext">Stages: Airbus</span>
                             <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/airbusLogo.webp"
                                 alt="Project Image">
                         </a>
@@ -89,6 +106,11 @@
                             <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/openGLIMG.webp"
                                 alt="Project Image">
                         </a>
+                        <a @click="openProject = 7" class="tooltip">
+                            <span class="tooltiptext">Club Dronolab</span>
+                            <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/DronolabLogo.webp"
+                                alt="Project Image">
+                        </a>
                         <template x-if="openProject === 1">
                             <div>
                                 <div class="popup-backdrop"></div>
@@ -100,19 +122,7 @@
                                         <div class="popup-text">
                                             <h2>Chef Chatter</h2>
                                             <p>
-                                                Chef Chatter était le projet final de ma première année universitaire.
-                                                En équipe de cinq,
-                                                nous avons développé une application web et mobile permettant aux
-                                                utilisateurs de partager
-                                                et consulter des recettes. L’application mobile partageait les mêmes
-                                                données que la version web,
-                                                ce qui nous a amenés à concevoir une base de données SQL connectée à
-                                                notre API via plusieurs routes.
-                                                Malheureusement, le site n’est plus disponible. Le projet a été réalisé
-                                                en PHP, HTML, CSS et JavaScript et
-                                                l'application mobile sur Android Studio en Java.
-                                                <br>
-                                                Les liens ci-dessous mènent aux dépôts GitHub des deux projets.
+                                                Réalisé en équipe de cinq lors de ma première année universitaire, Chef Chatter est une plateforme de partage et de consultation de recettes de cuisine. Le projet se décline en deux volets : une application web et une application mobile. Pour garantir la synchronisation des données entre les deux plateformes, nous avons conçu une base de données SQL robuste, interrogeable via une API REST. Bien que le site ne soit plus hébergé aujourd'hui, cette expérience m'a permis de consolider mes compétences en développement full-stack (PHP, HTML, CSS, JavaScript) et en développement mobile natif (Java sur Android Studio). Les codes sources restent consultables sur GitHub.
                                             </p>
                                             <a href="https://github.com/Lsthilaire0189/tch-099-01" class="btn">Projet
                                                 Web</a>
@@ -134,17 +144,7 @@
                                         <div class="popup-text">
                                             <h2>Le labyrinthe des ténèbres</h2>
                                             <p>
-                                                Ce projet a été réalisé en équipe de trois comme projet final de mes
-                                                études collégiales.
-                                                Nous devions créer une simulation 3D intégrant des éléments
-                                                informatiques, physiques et mathématiques.
-                                                Nous avons donc développé un jeu vidéo avec génération procédurale,
-                                                fonctions mathématiques et formules physiques
-                                                pour l’interaction avec les objets. J’ai principalement travaillé sur la
-                                                génération procédurale.
-                                                Ce projet a été réalisé dans Unity en C#. Le lien ci-dessous mène à la
-                                                présentation PowerPoint utilisée pour la présentation devant les
-                                                professeurs.
+                                                Développé en équipe de trois dans le cadre de mon projet de fin d'études collégiales, « Le labyrinthe des ténèbres » est une simulation 3D interactive alliant informatique, mathématiques et physique. Nous avons conçu un jeu vidéo intégrant la génération procédurale de niveaux, ainsi que l'application de formules physiques complexes pour gérer les interactions avec l'environnement. J'ai personnellement pris en charge l'algorithme de génération procédurale, garantissant une expérience unique à chaque partie. Entièrement réalisé sur Unity en C#, ce projet m'a permis d'allier logique mathématique et créativité. Vous trouverez ci-dessous la présentation détaillée du projet.
                                             </p>
                                             <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ"
                                                 class="btn">PowerPoint</a>
@@ -162,20 +162,27 @@
                                         <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/ftclogo.webp"
                                             alt="Popup Image">
                                         <div class="popup-text">
-                                            <h2>Mon premier stage, centre d'essais en vol d'Airbus Canada</h2>
+                                            <h2>Mes stages au centre d'essais en vol d'Airbus Canada</h2>
                                             <p>
-                                                Mon premier stage à l’ÉTS s’est déroulé chez Airbus Canada, au Centre
+                                                Lors de mes stages universitaires, j'ai eu l'opportunité de travailler
+                                                chez Airbus Canada, au sein du Centre
                                                 d’essais en vol.
-                                                J’y ai développé un outil de suivi de la configuration de différents
+                                                J’y ai développé et perfectionné un outil de suivi de la configuration
+                                                de différents
                                                 moyens d’essai,
-                                                qu’il s’agisse d’avions ou de simulateurs. Ce stage m’a permis de
-                                                collaborer avec les équipes
-                                                de maintenance et de définir précisément les besoins de l’application.
-                                                J’ai également découvert le monde de l’aéronautique et des simulateurs
+                                                qu’il s’agisse d’avions ou de simulateurs. Ces expériences m’ont permis
+                                                de
+                                                collaborer étroitement avec les équipes
+                                                de maintenance pour définir et raffiner continuellement les besoins de
+                                                l’application.
+                                                J’ai également approfondi ma connaissance du monde de l’aéronautique et
+                                                des simulateurs
                                                 de vol,
-                                                en échangeant avec les ingénieurs responsables des essais. J’ai
+                                                en échangeant avec les ingénieurs responsables des essais. En parallèle,
+                                                j’ai
                                                 développé plusieurs autres applications
-                                                pour différents groupes de l’équipe. Pour plus d’informations, n’hésitez
+                                                pour différents groupes de l’équipe. Pour plus d’informations sur mon
+                                                parcours, n’hésitez
                                                 pas à me contacter !
                                             </p>
                                         </div>
@@ -194,36 +201,18 @@
                                         <div class="popup-text">
                                             <h2>Développement et maintien de mon mod pour Vintage Story</h2>
                                             <p>
-                                                Durant la session d’été 2025, j’ai découvert le jeu indépendant Vintage
-                                                Story. Séduit par le potentiel du jeu,
-                                                j'ai eu l'idée de développer un mod intitulé “Sliding Wooden Shutters
-                                                and More!”.
-                                                Ce mod ajoute au jeu des volets coulissants inspirés de modèles
-                                                historiques,  destinés aux joueurs qui n’ont pas
-                                                encore accès aux fenêtres dans le jeu et qui souhaitent une alternative
-                                                réaliste à ce problème.
-                                                Toutes les propriétés du bloc sont définies en JSON, ainsi que ses
-                                                modèles et sa recette,
-                                                tandis que les comportements sont codés en C#.
-                                                <br>
-                                                Le mod a gagné en popularité dans la communauté, et certains joueurs
-                                                m’ont contacté pour signaler des bugs ou
-                                                suggérer de nouvelles fonctionnalités.
-                                                Je continue donc à le maintenir et à répondre aux attentes des joueurs.
-                                                Le premier lien ci-dessous mène à la page du mod sur le site officiel de
-                                                Vintage Story et
-                                                le second lien mène au dépôt GitHub du mod.
+                                                Fasciné par le potentiel du jeu indépendant Vintage Story, j'ai conçu et publié le mod « Sliding Wooden Shutters and More ! ». Cette extension introduit des volets coulissants d'inspiration historique, offrant aux joueurs une alternative immersive et fonctionnelle avant l'obtention de fenêtres en verre. Techniquement, l'architecture du mod repose sur des fichiers JSON pour la définition des modèles, des recettes et des propriétés des blocs, tandis que la logique et les comportements interactifs sont programmés en C#. Face à l'engouement de la communauté, j'assure aujourd'hui le maintien continu du projet, corrigeant les bugs signalés et intégrant de nouvelles fonctionnalités suggérées par les joueurs.
                                             </p>
                                             <a href="https://mods.vintagestory.at/slidingwoodenshutters"
-                                                class="btn">Page officiel du mod</a>
+                                                class="btn">Page officielle du mod</a>
                                             <a href="https://github.com/AntoineOD/VintageStoryMod-_-WoodenShutters"
-                                                class="btn">Github du mod</a>
+                                                class="btn">Dépôt GitHub</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </template>
-                         <template x-if="openProject === 5">
+                        <template x-if="openProject === 5">
                             <div>
                                 <div class="popup-backdrop"></div>
                                 <div class="popup">
@@ -232,27 +221,12 @@
                                         <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/planepic.webp"
                                             alt="Popup Image">
                                         <div class="popup-text">
-                                            <h2>Création d'un petit simulateur de vol sur Unreal Engine</h2>
+                                            <h2>Création d'un simulateur de vol sur Unreal Engine</h2>
                                             <p>
-                                                J'ai toujours eu une passion pour les simulateurs de vol. Je suis captivé
-                                                par la physique et le développement de ces derniers, et les simulateurs que j'ai pu
-                                                voir pendant mon stage 1 chez Airbus m'ont épaté par la précision qu'ils peuvent 
-                                                atteindre.
-
-                                                J'ai donc décidé de créer mon propre petit simulateur sur Unreal Engine pour
-                                                pouvoir, premièrement, me familiariser avec les formules physiques du domaine
-                                                qui s’appliquent à un objet, et deuxièmement, commencer à travailler en C++,
-                                                un langage qui n'est pas vraiment enseigné dans mon programme à l'école.
-                                                J'ai aussi, en parallèle, appris un peu à utiliser le logiciel Blender pour créer mon propre
-                                                modèle d'avion.
-
-                                                Le lien ci-dessous mène au répertoire GitHub de mon code source concernant
-                                                l'acteur principal, mon avion, et toutes les formules physiques qui s'appliquent à ce
-                                                dernier. Un autre lien mène à une vidéo d'une petite démonstration du simulateur
-                                                en action.
+                                                Passionné par l'aéronautique et impressionné par le réalisme des simulateurs professionnels découverts lors de mes stages chez Airbus, j'ai entrepris la création de mon propre simulateur de vol sur Unreal Engine. Ce projet personnel poursuit un double objectif : modéliser informatiquement les principes de la physique aérodynamique (portance, traînée, poussée) et maîtriser la programmation orientée objet en C++, un langage que j'ai appris en autodidacte. En parallèle, je me suis formé à la modélisation 3D sur Blender afin de concevoir le modèle de l'avion de A à Z. Vous pouvez consulter mon code source détaillé gérant la physique de vol sur GitHub, ou visionner une démonstration vidéo du rendu actuel.
                                             </p>
-                                            <a href="https://github.com/AntoineOD/FlightSimUnreal"
-                                                class="btn">Lien vers le GitHub</a>
+                                            <a href="https://github.com/AntoineOD/FlightSimUnreal" class="btn">Lien vers
+                                                le GitHub</a>
                                             <a href="https://drive.google.com/file/d/13ihOLN9oR2D07l9uG8_nk83m9Moo2gpm/view?usp=sharing"
                                                 class="btn">Lien vers la démonstration</a>
                                         </div>
@@ -269,18 +243,30 @@
                                         <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/openglscn.webp"
                                             alt="Popup Image">
                                         <div class="popup-text">
-                                            <h2>Rapport d'apprentisaage OpenGL</h2>
+                                            <h2>Exploration et apprentissage de l'API graphique OpenGL</h2>
                                             <p>
-                                                    Pendant une fin de semaine, j'ai décidé d'apprendre les bases d'OpenGL.
-                                                    J'ai donc suivi un tutoriel en ligne pour pouvoir rapidement apprendre les
-                                                    bases de cette API graphique. J'ai appris à créer une fenêtre, à y dessiner des formes
-                                                    simples, à appliquer des textures, et à manipuler une caméra. J'ai aussi appris à importer
-                                                    des modèles 3D et à manipuler la lumière dans une scène 3D.
-                                                    Le lien ci-dessous mène au rapport d'apprentissage que j'ai rédigé après avoir
-                                                    complété le tutoriel.
+                                                Animé par le désir de comprendre le fonctionnement bas niveau du rendu graphique, j'ai consacré mon temps libre à l'apprentissage de l'API OpenGL. À travers divers exercices pratiques, j'ai maîtrisé la création de contextes de rendu, le dessin de primitives géométriques, l'application de textures, ainsi que la programmation de shaders. J'ai par la suite approfondi mes connaissances en intégrant une caméra virtuelle, en important des modèles 3D complexes et en implémentant des modèles d'éclairage dynamiques. L'ensemble de ma démarche de recherche et de mes expérimentations est documenté dans le rapport technique disponible ci-dessous.
                                             </p>
                                             <a href="https://drive.google.com/file/d/1SigM43kqxpRdXbBXh1cVUlCQe9K39bX5/view?usp=sharing"
                                                 class="btn">Lien vers le rapport</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="openProject === 7">
+                            <div>
+                                <div class="popup-backdrop"></div>
+                                <div class="popup">
+                                    <button class="close-btn" @click="openProject = null">Retour</button>
+                                    <div class="popup-content">
+                                        <img src="https://raw.githubusercontent.com/AntoineOD/PortfolioAntoineO-Donnell/main/Images/CompeDrono.webp"
+                                            alt="Popup Image">
+                                        <div class="popup-text">
+                                            <h2>Implication au sein du club étudiant Dronolab</h2>
+                                            <p>
+                                                Depuis l'été 2025, je m'investis activement au sein de Dronolab, le club scientifique de drones de l'ÉTS. Cette expérience me donne l'opportunité de travailler avec une panoplie d'outils de pointe, tels que des capteurs LiDAR, des nacelles (gimbals), de l'intelligence artificielle et des contrôleurs de vol. Mes tâches principales consistent à développer l'interface de contrôle des charges utiles (payloads) et à concevoir le système de récupération et de traitement des nuages de points générés par le LiDAR. Grâce à mon implication, j'ai eu la chance de participer avec l'équipe à la compétition annuelle étudiante de systèmes d'aéronefs sans pilote (AEAC Annual Student UAS Competition) en 2026.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

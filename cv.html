@@ -8,13 +8,23 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5a4d3f2602.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         particlesJS.load('particles-js', 'particles.json', function () {
             console.log('particles.js loaded - callback');
         });
     </script>
-    <script src="zoom.js"></script>
+
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light-theme');
+        }
+        function toggleTheme(e) {
+            if (e) e.preventDefault();
+            document.documentElement.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.documentElement.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+    </script>
 </head>
 
 <body>
@@ -49,6 +59,13 @@
                         <span>Contact</span>
                     </a>
                 </section>
+                <div style="flex-grow: 1;"></div>
+                <section style="display: inline-block; margin-bottom: 20px;">
+                    <a href="#" id="theme-toggle" onclick="toggleTheme(event)">
+                        <i class="fa-solid fa-circle-half-stroke icon"></i>
+                        <span>Theme</span>
+                    </a>
+                </section>
             </aside>
             <div class="wrapCV">
                 <div id="particles-js"></div>
@@ -57,16 +74,19 @@
                         <div class="blocText">
                             <span id="debut">Bonjour, je m'appelle Antoine O'Donnell.</span><br>
                             <br>
-                            Je suis actuellement étudiant en génie logiciel à l'École de technologie supérieure.<br>
-                            Je suis une personne passionnée et avide d'apprendre.<br><br>
-                            Actuellement, j'aime explorer toutes les branches du métier sans me spécialiser dans l'une d'entre elles.<br>
-                            J'ai de solides bases en Java et C#, en développement web, en bases de données SQL, ainsi que quelques connaissances en programmation assembleur.<br><br>
-                            Je suis ouvert à toutes les opportunités. N'hésitez pas à me contacter.
+                            Actuellement étudiant en génie logiciel à l'École de technologie supérieure (ÉTS), je suis
+                            profondément passionné par le développement logiciel et l'innovation technologique.<br><br>
+                            Fasciné par le domaine de l'aérospatiale, je suis également étudiant pilote privé et je
+                            m'investis activement au sein du club scientifique Dronolab. J'adore me retrouver à
+                            l'intersection entre l'aviation et l'informatique.<br><br>
+                            Curieux, polyvalent et toujours avide d'apprendre, je suis ouvert à toutes les opportunités.
+                            N'hésitez pas à me contacter !
                         </div>
                     </div>
                     <div id="linkcv">
                         <div class="buttonlink">
-                            <a href="https://drive.google.com/file/d/1JOBLvEh2D92vi6GnkpoS_pcLblkj23df/view?usp=drive_link">
+                            <a
+                                href="https://drive.google.com/file/d/1JOBLvEh2D92vi6GnkpoS_pcLblkj23df/view?usp=drive_link">
                                 <span>Téléchargement de mon CV</span>
                                 <i class="fa-solid fa-download icons" style="color: #FEFEFE;"></i>
                             </a>
