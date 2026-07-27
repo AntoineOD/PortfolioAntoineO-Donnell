@@ -34,35 +34,36 @@
                 <section :class="{ 'zoomed': hoveredLink === 'Antoine' }" @mouseenter="hoveredLink = 'Antoine'"
                     @mouseleave="hoveredLink = null" style="display: inline-block;">
                     <a href="index.html">
-                        <i class="fa-solid fa-house-user icon" style="color: #FEFEFE;"></i>
+                        <i class="fa-solid fa-house-user icon"></i>
                         <span>Home</span>
                     </a>
                 </section>
-                <section :class="{ 'zoomed': hoveredLink === 'Projects' }" @mouseenter="hoveredLink = 'Projects'"
+                <section class="active" :class="{ 'zoomed': hoveredLink === 'Projects' }" @mouseenter="hoveredLink = 'Projects'"
                     @mouseleave="hoveredLink = null" style="display: inline-block;">
-                    <a href="index.html">
-                        <i class="fa-solid fa-folder-open icon" style="color:#CC6B2C;"></i>
+                    <a href="projets.html">
+                        <i class="fa-solid fa-folder-open icon"></i>
                         <span>Projets</span>
                     </a>
                 </section>
                 <section :class="{ 'zoomed': hoveredLink === 'CV' }" @mouseenter="hoveredLink = 'CV'"
                     @mouseleave="hoveredLink = null" style="display: inline-block;">
                     <a href="cv.html">
-                        <i class="fa-solid fa-file-lines icon" style="color: #FEFEFE;"></i>
+                        <i class="fa-solid fa-file-lines icon"></i>
                         <span>CV</span>
                     </a>
                 </section>
                 <section :class="{ 'zoomed': hoveredLink === 'Contact' }" @mouseenter="hoveredLink = 'Contact'"
                     @mouseleave="hoveredLink = null" style="display: inline-block;">
                     <a href="contact.html">
-                        <i class="fa-solid fa-address-book icon" style="color: #FEFEFE;"></i>
+                        <i class="fa-solid fa-address-book icon"></i>
                         <span>Contact</span>
                     </a>
                 </section>
                 <div style="flex-grow: 1;"></div>
                 <section style="display: inline-block; margin-bottom: 20px;">
                     <a href="#" id="theme-toggle" onclick="toggleTheme(event)">
-                        <i class="fa-solid fa-circle-half-stroke icon"></i>
+                        <i class="fa-solid fa-moon icon theme-icon-moon"></i>
+                        <i class="fa-solid fa-sun icon theme-icon-sun"></i>
                         <span>Theme</span>
                     </a>
                 </section>
@@ -122,7 +123,16 @@
                                         <div class="popup-text">
                                             <h2>Chef Chatter</h2>
                                             <p>
-                                                Réalisé en équipe de cinq lors de ma première année universitaire, Chef Chatter est une plateforme de partage et de consultation de recettes de cuisine. Le projet se décline en deux volets : une application web et une application mobile. Pour garantir la synchronisation des données entre les deux plateformes, nous avons conçu une base de données SQL robuste, interrogeable via une API REST. Bien que le site ne soit plus hébergé aujourd'hui, cette expérience m'a permis de consolider mes compétences en développement full-stack (PHP, HTML, CSS, JavaScript) et en développement mobile natif (Java sur Android Studio). Les codes sources restent consultables sur GitHub.
+                                                Réalisé en équipe de cinq lors de ma première année universitaire, Chef
+                                                Chatter est une plateforme de partage et de consultation de recettes de
+                                                cuisine. Le projet se décline en deux volets : une application web et
+                                                une application mobile. Pour garantir la synchronisation des données
+                                                entre les deux plateformes, nous avons conçu une base de données SQL
+                                                robuste, interrogeable via une API REST. Bien que le site ne soit plus
+                                                hébergé aujourd'hui, cette expérience m'a permis de consolider mes
+                                                compétences en développement full-stack (PHP, HTML, CSS, JavaScript) et
+                                                en développement mobile natif (Java sur Android Studio). Les codes
+                                                sources restent consultables sur GitHub.
                                             </p>
                                             <a href="https://github.com/Lsthilaire0189/tch-099-01" class="btn">Projet
                                                 Web</a>
@@ -144,10 +154,22 @@
                                         <div class="popup-text">
                                             <h2>Le labyrinthe des ténèbres</h2>
                                             <p>
-                                                Développé en équipe de trois dans le cadre de mon projet de fin d'études collégiales, « Le labyrinthe des ténèbres » est une simulation 3D interactive alliant informatique, mathématiques et physique. Nous avons conçu un jeu vidéo intégrant la génération procédurale de niveaux, ainsi que l'application de formules physiques complexes pour gérer les interactions avec l'environnement. J'ai personnellement pris en charge l'algorithme de génération procédurale, garantissant une expérience unique à chaque partie. Entièrement réalisé sur Unity en C#, ce projet m'a permis d'allier logique mathématique et créativité. Vous trouverez ci-dessous la présentation détaillée du projet.
+                                                Développé en équipe de trois dans le cadre de mon projet de fin d'études
+                                                collégiales, « Le labyrinthe des ténèbres » est une simulation 3D
+                                                interactive alliant informatique, mathématiques et physique. Nous avons
+                                                conçu un jeu vidéo intégrant la génération procédurale de niveaux, ainsi
+                                                que l'application de formules physiques complexes pour gérer les
+                                                interactions avec l'environnement. J'ai personnellement pris en charge
+                                                l'algorithme de génération procédurale, garantissant une expérience
+                                                unique à chaque partie. Entièrement réalisé sur Unity en C#, ce projet
+                                                m'a permis d'allier logique mathématique et créativité. Vous trouverez
+                                                ci-dessous la présentation détaillée du projet.
                                             </p>
                                             <a href="https://etsmtl365-my.sharepoint.com/:p:/r/personal/antoine_odonnell_1_ens_etsmtl_ca/Documents/Pr%C3%A9sentation.pptx?d=w9e63f2583d6f4e1b8062e4a0a0cb2fc9&csf=1&web=1&e=gaKc3z&nav=eyJzSWQiOjI1NiwiY0lkIjoxMzMwNjg4MTQ1fQ"
                                                 class="btn">PowerPoint</a>
+                                            <a href="https://www.youtube.com/watch?v=B6VnwbAuxA0" class="btn">Lien vers
+                                                la
+                                                vidéo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -201,7 +223,17 @@
                                         <div class="popup-text">
                                             <h2>Développement et maintien de mon mod pour Vintage Story</h2>
                                             <p>
-                                                Fasciné par le potentiel du jeu indépendant Vintage Story, j'ai conçu et publié le mod « Sliding Wooden Shutters and More ! ». Cette extension introduit des volets coulissants d'inspiration historique, offrant aux joueurs une alternative immersive et fonctionnelle avant l'obtention de fenêtres en verre. Techniquement, l'architecture du mod repose sur des fichiers JSON pour la définition des modèles, des recettes et des propriétés des blocs, tandis que la logique et les comportements interactifs sont programmés en C#. Face à l'engouement de la communauté, j'assure aujourd'hui le maintien continu du projet, corrigeant les bugs signalés et intégrant de nouvelles fonctionnalités suggérées par les joueurs.
+                                                Fasciné par le potentiel du jeu indépendant Vintage Story, j'ai conçu et
+                                                publié le mod « Sliding Wooden Shutters and More ! ». Cette extension
+                                                introduit des volets coulissants d'inspiration historique, offrant aux
+                                                joueurs une alternative immersive et fonctionnelle avant l'obtention de
+                                                fenêtres en verre. Techniquement, l'architecture du mod repose sur des
+                                                fichiers JSON pour la définition des modèles, des recettes et des
+                                                propriétés des blocs, tandis que la logique et les comportements
+                                                interactifs sont programmés en C#. Face à l'engouement de la communauté,
+                                                j'assure aujourd'hui le maintien continu du projet, corrigeant les bugs
+                                                signalés et intégrant de nouvelles fonctionnalités suggérées par les
+                                                joueurs.
                                             </p>
                                             <a href="https://mods.vintagestory.at/slidingwoodenshutters"
                                                 class="btn">Page officielle du mod</a>
@@ -223,7 +255,17 @@
                                         <div class="popup-text">
                                             <h2>Création d'un simulateur de vol sur Unreal Engine</h2>
                                             <p>
-                                                Passionné par l'aéronautique et impressionné par le réalisme des simulateurs professionnels découverts lors de mes stages chez Airbus, j'ai entrepris la création de mon propre simulateur de vol sur Unreal Engine. Ce projet personnel poursuit un double objectif : modéliser informatiquement les principes de la physique aérodynamique (portance, traînée, poussée) et maîtriser la programmation orientée objet en C++, un langage que j'ai appris en autodidacte. En parallèle, je me suis formé à la modélisation 3D sur Blender afin de concevoir le modèle de l'avion de A à Z. Vous pouvez consulter mon code source détaillé gérant la physique de vol sur GitHub, ou visionner une démonstration vidéo du rendu actuel.
+                                                Passionné par l'aéronautique et impressionné par le réalisme des
+                                                simulateurs professionnels découverts lors de mes stages chez Airbus,
+                                                j'ai entrepris la création de mon propre simulateur de vol sur Unreal
+                                                Engine. Ce projet personnel poursuit un double objectif : modéliser
+                                                informatiquement les principes de la physique aérodynamique (portance,
+                                                traînée, poussée) et maîtriser la programmation orientée objet en C++,
+                                                un langage que j'ai appris en autodidacte. En parallèle, je me suis
+                                                formé à la modélisation 3D sur Blender afin de concevoir le modèle de
+                                                l'avion de A à Z. Vous pouvez consulter mon code source détaillé gérant
+                                                la physique de vol sur GitHub, ou visionner une démonstration vidéo du
+                                                rendu actuel.
                                             </p>
                                             <a href="https://github.com/AntoineOD/FlightSimUnreal" class="btn">Lien vers
                                                 le GitHub</a>
@@ -245,7 +287,16 @@
                                         <div class="popup-text">
                                             <h2>Exploration et apprentissage de l'API graphique OpenGL</h2>
                                             <p>
-                                                Animé par le désir de comprendre le fonctionnement bas niveau du rendu graphique, j'ai consacré mon temps libre à l'apprentissage de l'API OpenGL. À travers divers exercices pratiques, j'ai maîtrisé la création de contextes de rendu, le dessin de primitives géométriques, l'application de textures, ainsi que la programmation de shaders. J'ai par la suite approfondi mes connaissances en intégrant une caméra virtuelle, en important des modèles 3D complexes et en implémentant des modèles d'éclairage dynamiques. L'ensemble de ma démarche de recherche et de mes expérimentations est documenté dans le rapport technique disponible ci-dessous.
+                                                Animé par le désir de comprendre le fonctionnement bas niveau du rendu
+                                                graphique, j'ai consacré mon temps libre à l'apprentissage de l'API
+                                                OpenGL. À travers divers exercices pratiques, j'ai maîtrisé la création
+                                                de contextes de rendu, le dessin de primitives géométriques,
+                                                l'application de textures, ainsi que la programmation de shaders. J'ai
+                                                par la suite approfondi mes connaissances en intégrant une caméra
+                                                virtuelle, en important des modèles 3D complexes et en implémentant des
+                                                modèles d'éclairage dynamiques. L'ensemble de ma démarche de recherche
+                                                et de mes expérimentations est documenté dans le rapport technique
+                                                disponible ci-dessous.
                                             </p>
                                             <a href="https://drive.google.com/file/d/1SigM43kqxpRdXbBXh1cVUlCQe9K39bX5/view?usp=sharing"
                                                 class="btn">Lien vers le rapport</a>
@@ -265,7 +316,17 @@
                                         <div class="popup-text">
                                             <h2>Implication au sein du club étudiant Dronolab</h2>
                                             <p>
-                                                Depuis l'été 2025, je m'investis activement au sein de Dronolab, le club scientifique de drones de l'ÉTS. Cette expérience me donne l'opportunité de travailler avec une panoplie d'outils de pointe, tels que des capteurs LiDAR, des nacelles (gimbals), de l'intelligence artificielle et des contrôleurs de vol. Mes tâches principales consistent à développer l'interface de contrôle des charges utiles (payloads) et à concevoir le système de récupération et de traitement des nuages de points générés par le LiDAR. Grâce à mon implication, j'ai eu la chance de participer avec l'équipe à la compétition annuelle étudiante de systèmes d'aéronefs sans pilote (AEAC Annual Student UAS Competition) en 2026.
+                                                Depuis l'été 2025, je m'investis activement au sein de Dronolab, le club
+                                                scientifique de drones de l'ÉTS. Cette expérience me donne l'opportunité
+                                                de travailler avec une panoplie d'outils de pointe, tels que des
+                                                capteurs LiDAR, des nacelles (gimbals), de l'intelligence artificielle
+                                                et des contrôleurs de vol. Mes tâches principales consistent à
+                                                développer l'interface de contrôle des charges utiles (payloads) et à
+                                                concevoir le système de récupération et de traitement des nuages de
+                                                points générés par le LiDAR. Grâce à mon implication, j'ai eu la chance
+                                                de participer avec l'équipe à la compétition annuelle étudiante de
+                                                systèmes d'aéronefs sans pilote (AEAC Annual Student UAS Competition) en
+                                                2026.
                                             </p>
                                             <a href="https://www.youtube.com/watch?v=-V9pjc5mUVs" target="_blank"
                                                 class="btn">Vidéo de la compétition (Task 2)</a>
